@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Book Recommendations Form</title>
+</head>
+
+<body>
+	
+	<div class="container">
+	
+		<h3>Book Recommendations Form</h3>
+		<hr>
+	
+		<form action="#" th:action="@{/user/recommend_offers}"
+						 th:object="${recomDto}" method="POST">
+	    		
+    		<label for="html">Recommendation Strategy</label>
+    		<ul>
+    			<li th:each="astrategy: ${recomDto.recommendationStrategies}">
+    				<input type="radio" th:field="*{selectedStrategy}" th:value="${astrategy}" />
+    				<label th:for="${#ids.prev('selectedStrategy')}" th:text="${astrategy}"></label>
+    			</li>
+    		</ul>
+    		
+			<button type="submit" class="btn btn-info col-2">Recommend</button>
+						
+		</form>
+	
+		<hr>
+
+		<a th:href="@{/user/dashboard}">Back to user dashboard</a>
+		
+	</div>
+</body>
+
+</html>
+
+
+
+

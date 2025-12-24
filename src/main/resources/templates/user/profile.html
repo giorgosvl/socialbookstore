@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>User Profile</title>
+</head>
+
+<body>
+	
+	<div class="container">
+			
+		<p class="h4 mb-4">User Profile </p>
+	
+		<form action="#" th:action="@{/user/save_profile}"
+						 th:object="${profile}" method="POST">
+		
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{username}" />
+			
+			<label for="html">Full Name</label>
+			<input type="text" th:field="*{fullName}"
+					class="form-control mb-4 col-4" > 
+
+			<label for="html">Age</label>
+			<input type="text" th:field="*{age}"
+					class="form-control mb-4 col-4" >
+					
+			<label for="html">Favorite Authors</label>		
+			<input type="text" th:field="*{favouriteBookAuthors}"
+					class="form-control mb-4 col-4" >
+												
+  			<label for="html">Favorite Book Categories</label>
+    		<ul>
+    			<li th:each="category: ${categories}">
+    				<input type="checkbox" th:field="*{favouriteBookCategories}" th:value="${category.name}" />
+    				<label th:for="${#ids.prev('favouriteBookCategories')}" th:text="${category.name}"></label>
+    			</li>
+    		</ul>
+    		
+			<button type="submit" class="btn btn-info col-2">Save</button>
+						
+		</form>
+	
+		<hr>
+		<a th:href="@{/user/dashboard}">Back to User Dashboard</a>
+		
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

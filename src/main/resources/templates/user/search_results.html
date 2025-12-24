@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Book Search Results</title>
+</head>
+
+<body>
+
+<div class="container">
+
+	<h3>Book Search Results</h3>
+	<hr>
+	
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>Offer Id</th>
+				<th>Title</th>
+				<th>Authors</th>
+				<th>Category</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="book : ${books}">
+			
+				<td th:text="${book.id}" />	
+				<td th:text="${book.title}" />	
+				<td th:text="${book.authors}" />
+				<td th:text="${book.category}" />		
+				<td>
+					<a th:href="@{/user/request_book(selected_book_id=${book.id})}"
+					   class="btn btn-info btn-sm btn-block">
+						Request Book
+					</a>		
+				</td>
+				
+			</tr>
+		</tbody>		
+	</table>
+	
+	<a th:href="@{/user/dashboard}">Back to User Dashboard</a>
+	
+</div>
+	
+</body>
+</html>
+
+
+

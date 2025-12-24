@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Book Request Directory</title>
+</head>
+
+<body>
+
+<div class="container">
+
+	<h3>Book Requests Directory</h3>
+	<hr>
+	
+	
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>Book Id</th>
+				<th>Title</th>
+				<th>Authors</th>
+				<th>Category</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="request : ${requests}">
+			
+				<td th:text="${request.id}" />	
+				<td th:text="${request.title}" />	
+				<td th:text="${request.authors}" />
+				<td th:text="${request.category}" />		
+				<td>
+					
+					<a th:href="@{/user/delete_book_request(selected_request_id=${request.id})}"
+					   class="btn btn-danger btn-sm btn-block"
+					   onclick="if (!(confirm('Are you sure you want to delete this book offer?'))) return false">
+						Delete book request
+					</a>
+								
+				</td>
+				
+			</tr>
+		</tbody>		
+	</table>
+	
+	<a th:href="@{/user/dashboard}">Back to User Dashboard</a>
+	
+</div>
+	
+</body>
+</html>
+
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Book Search Form</title>
+</head>
+
+<body>
+	
+	<div class="container">
+	
+		<h3>Book Search Form</h3>
+		<hr>
+	
+		<form action="#" th:action="@{/user/search_offer}"
+						 th:object="${searchDto}" method="POST">
+		
+			<input type="text" th:field="*{title}"
+					class="form-control mb-4 col-4" placeholder="Title">
+
+			<input type="text" th:field="*{authors}"
+					class="form-control mb-4 col-4" placeholder="Authors">
+					
+    		<label for="html">Search Strategy</label>
+    		<ul>
+    			<li th:each="astrategy: ${searchDto.searchStrategies}">
+    				<input type="radio" th:field="*{selectedStrategy}" th:value="${astrategy}" />
+    				<label th:for="${#ids.prev('selectedStrategy')}" th:text="${astrategy}"></label>
+    			</li>
+    		</ul>
+    		
+			<button type="submit" class="btn btn-info col-2">Search</button>
+						
+		</form>
+	
+		<hr>
+
+		<a th:href="@{/user/dashboard}">Back to user dashboard</a>
+		
+	</div>
+</body>
+
+</html>
+
+
+
+

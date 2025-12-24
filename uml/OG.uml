@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/user/OneDrive - ΠΑΝΕΠΙΣΤΗΜΙΟ ΙΩΑΝΝΙΝΩΝ/9o Εξάμηνο/Ανάπτυξη Λογισμικού ΙΙ/project-2025-material/socialbookstore/src/main/java</OriginalElement>
+  <nodes>
+    <node x="351.0" y="46.0">myy803.socialbookstore.datamodel.recomstrategies.RecommendationsStrategy</node>
+    <node x="-107.26231605886107" y="166.0">myy803.socialbookstore.datamodel.searchstrategies.ApproximateSearchStrategy</node>
+    <node x="543.5" y="-14.0">myy803.socialbookstore.mappers.UserProfileMapper</node>
+    <node x="-175.76231605886107" y="226.0">myy803.socialbookstore.datamodel.Role</node>
+    <node x="956.0" y="226.0">myy803.socialbookstore.datamodel.recomstrategies.FavouriteAuthorsStrategy</node>
+    <node x="1809.6353166986564" y="766.0">myy803.socialbookstore.datamodel.BookAuthor</node>
+    <node x="-37.262316058861074" y="346.0">myy803.socialbookstore.datamodel.User</node>
+    <node x="1792.6353166986564" y="886.0">myy803.socialbookstore.mappers.BookDtoMapper</node>
+    <node x="140.23768394113893" y="226.0">myy803.socialbookstore.datamodel.searchstrategies.ExactSearchStrategy</node>
+    <node x="980.047506078055" y="406.0">myy803.socialbookstore.mappers.BookCategoryMapper</node>
+    <node x="638.5" y="166.0">myy803.socialbookstore.datamodel.recomstrategies.FavouriteCategoriesAndAuthorsStrategy</node>
+    <node x="1350.1353166986564" y="406.0">myy803.socialbookstore.formsdata.RecommendationsDto</node>
+    <node x="1653.1353166986564" y="406.0">myy803.socialbookstore.datamodel.UserProfile</node>
+    <node x="231.73768394113893" y="-14.0">myy803.socialbookstore.mappers.BookMapper</node>
+    <node x="848.8130825335893" y="323.2328701215611">myy803.socialbookstore.mappers.BookAuthorMapper</node>
+    <node x="654.0" y="406.0">myy803.socialbookstore.datamodel.recomstrategies.RecommendationsFactory</node>
+    <node x="1239.1353166986564" y="226.0">myy803.socialbookstore.formsdata.UserProfileDto</node>
+    <node x="1535.1353166986564" y="346.0">myy803.socialbookstore.formsdata.SearchDto</node>
+    <node x="1780.1353166986564" y="265.29406321177225">myy803.socialbookstore.datamodel.BookCategory</node>
+    <node x="144.52034804862467" y="626.0">myy803.socialbookstore.config.WebSecurityConfig</node>
+    <node x="1589.6353166986564" y="946.0">myy803.socialbookstore.SocialbookstoreApplication</node>
+    <node x="1376.6353166986564" y="946.0">myy803.socialbookstore.config.WebMvcConfig</node>
+    <node x="270.63548560460663" y="543.7445630198337">myy803.socialbookstore.config.CustomSecuritySuccessHandler</node>
+    <node x="1179.25" y="651.704824056302">myy803.socialbookstore.controllers.UserController</node>
+    <node x="1488.1353166986564" y="886.0">myy803.socialbookstore.datamodel.UserProfile2</node>
+    <node x="1841.6353166986564" y="406.0">myy803.socialbookstore.formsdata.BookDto</node>
+    <node x="4.2376839411389255" y="556.452493921945">myy803.socialbookstore.controllers.AuthController</node>
+    <node x="-166.26231605886107" y="406.0">myy803.socialbookstore.mappers.UserMapper</node>
+    <node x="124.73768394113893" y="346.0">myy803.socialbookstore.datamodel.searchstrategies.SearchFactory</node>
+    <node x="404.5" y="226.0">myy803.socialbookstore.datamodel.recomstrategies.FavouriteCategoriesStrategy</node>
+    <node x="-141.26231605886107" y="626.0">myy803.socialbookstore.services.UserServiceImpl</node>
+    <node x="-118.26231605886107" y="46.0">myy803.socialbookstore.datamodel.searchstrategies.SearchStrategy</node>
+    <node x="1835.6353166986564" y="626.0">myy803.socialbookstore.datamodel.Book</node>
+    <node x="34.737683941138926" y="406.0">myy803.socialbookstore.services.UserService</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="myy803.socialbookstore.config.WebSecurityConfig" target="myy803.socialbookstore.services.UserServiceImpl" relationship="CREATE">
+      <point x="-49.5" y="-14.0" />
+      <point x="194.02034804862467" y="640.0" />
+      <point x="-54.262316058861074" y="640.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.controllers.UserController" target="myy803.socialbookstore.mappers.BookAuthorMapper" relationship="TO_ONE">
+      <point x="-40.75" y="-14.0" />
+      <point x="961.8156447856659" y="651.704824056302" />
+      <point x="13.002562252076586" y="15.855109404990344" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.UserProfile" target="myy803.socialbookstore.datamodel.BookCategory" relationship="TO_MANY">
+      <point x="33.75" y="-14.0" />
+      <point x="1754.3853166986564" y="380.0" />
+      <point x="1886.6291030070379" y="380.0" />
+      <point x="1886.6291030070379" y="293.29406321177225" />
+      <point x="40.25" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.controllers.UserController" target="myy803.socialbookstore.datamodel.UserProfile" relationship="CREATE">
+      <point x="79.36409085092691" y="-13.09665003199052" />
+      <point x="1340.114090850927" y="600.0" />
+      <point x="1660.6353166986564" y="600.0" />
+      <point x="1660.6353166986564" y="460.0" />
+      <point x="1675.6353166986564" y="460.0" />
+      <point x="-45.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.controllers.UserController" target="myy803.socialbookstore.formsdata.UserProfileDto" relationship="CREATE">
+      <point x="79.36409085092691" y="-10.893379398593197" />
+      <point x="1340.114090850927" y="600.0" />
+      <point x="1660.6353166986564" y="600.0" />
+      <point x="1660.6353166986564" y="460.0" />
+      <point x="1320.6353166986564" y="460.0" />
+      <point x="1320.6353166986564" y="320.0" />
+      <point x="1360.6353166986564" y="320.0" />
+      <point x="1360.6353166986564" y="280.0" />
+      <point x="1361.3853166986564" y="280.0" />
+      <point x="40.75" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.services.UserServiceImpl" target="myy803.socialbookstore.services.UserService" relationship="REALIZATION">
+      <point x="43.5" y="-14.0" />
+      <point x="-10.762316058861074" y="540.0" />
+      <point x="70.23768394113893" y="540.0" />
+      <point x="-35.5" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.UserProfile2" target="myy803.socialbookstore.datamodel.Book" relationship="TO_MANY">
+      <point x="36.25" y="-14.0" />
+      <point x="1596.8853166986564" y="835.2996893154191" />
+      <point x="1771.471491234805" y="835.2996893154191" />
+      <point x="1771.471491234805" y="740.0" />
+      <point x="1768.8853166986564" y="740.0" />
+      <point x="1768.8853166986564" y="650.6230582213692" />
+      <point x="1903.1353166986564" y="650.6230582213692" />
+      <point x="22.5" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.recomstrategies.FavouriteAuthorsStrategy" target="myy803.socialbookstore.datamodel.recomstrategies.RecommendationsStrategy" relationship="REALIZATION">
+      <point x="-62.0" y="-14.0" />
+      <point x="1018.0" y="140.0" />
+      <point x="480.0" y="140.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.searchstrategies.ApproximateSearchStrategy" target="myy803.socialbookstore.datamodel.searchstrategies.SearchStrategy" relationship="REALIZATION">
+      <point x="-66.5" y="-14.0" />
+      <point x="-40.762316058861074" y="140.0" />
+      <point x="-34.262316058861074" y="140.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.controllers.UserController" target="myy803.socialbookstore.datamodel.recomstrategies.RecommendationsFactory" relationship="TO_ONE">
+      <point x="-40.75" y="-14.0" />
+      <point x="1220.0" y="600.0" />
+      <point x="898.9766142034549" y="600.0" />
+      <point x="898.9766142034549" y="460.0" />
+      <point x="899.0568578374894" y="460.0" />
+      <point x="119.05685783748936" y="15.10433269353689" />
+    </edge>
+    <edge source="myy803.socialbookstore.controllers.UserController" target="myy803.socialbookstore.formsdata.SearchDto" relationship="CREATE">
+      <point x="81.56736148432401" y="-15.29992066538773" />
+      <point x="1342.317361484324" y="600.0" />
+      <point x="1660.6353166986564" y="600.0" />
+      <point x="1660.6353166986564" y="460.0" />
+      <point x="1600.6353166986564" y="460.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.recomstrategies.RecommendationsFactory" target="myy803.socialbookstore.datamodel.recomstrategies.FavouriteCategoriesAndAuthorsStrategy" relationship="TO_ONE">
+      <point x="23.180159181059366" y="-9.640153550863772" />
+      <point x="803.1801591810594" y="223.0818426103647" />
+      <point x="803.1801591810594" y="192.2360537428023" />
+      <point x="-16.819840818940634" y="12.236053742802312" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.UserProfile2" target="myy803.socialbookstore.formsdata.UserProfileDto" relationship="CREATE">
+      <point x="-41.07180150991735" y="-15.542679974409111" />
+      <point x="1519.563515188739" y="860.0" />
+      <point x="1520.6353166986564" y="860.0" />
+      <point x="1520.6353166986564" y="580.0" />
+      <point x="1340.757901471529" y="580.0" />
+      <point x="1340.757901471529" y="320.0" />
+      <point x="1360.6353166986564" y="320.0" />
+      <point x="1360.6353166986564" y="280.0" />
+      <point x="1361.3853166986564" y="280.0" />
+      <point x="40.75" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.controllers.UserController" target="myy803.socialbookstore.formsdata.RecommendationsDto" relationship="CREATE">
+      <point x="81.56736148432401" y="-10.893379398593197" />
+      <point x="1342.317361484324" y="600.0" />
+      <point x="1660.6353166986564" y="600.0" />
+      <point x="1660.6353166986564" y="460.0" />
+      <point x="1460.6353166986564" y="460.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.recomstrategies.FavouriteCategoriesStrategy" target="myy803.socialbookstore.datamodel.recomstrategies.RecommendationsStrategy" relationship="REALIZATION">
+      <point x="-67.75" y="-14.0" />
+      <point x="472.25" y="140.0" />
+      <point x="480.0" y="140.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.recomstrategies.FavouriteCategoriesAndAuthorsStrategy" target="myy803.socialbookstore.mappers.UserProfileMapper" relationship="TO_ONE">
+      <point x="90.75" y="-14.0" />
+      <point x="910.75" y="102.3738349328215" />
+      <point x="679.0625801663441" y="102.3738349328215" />
+      <point x="39.062580166344105" y="19.65969033909147" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.recomstrategies.FavouriteCategoriesAndAuthorsStrategy" target="myy803.socialbookstore.datamodel.recomstrategies.RecommendationsStrategy" relationship="REALIZATION">
+      <point x="-90.75" y="-14.0" />
+      <point x="729.25" y="140.0" />
+      <point x="480.0" y="140.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.UserProfile" target="myy803.socialbookstore.formsdata.UserProfileDto" relationship="CREATE">
+      <point x="-33.75" y="-14.0" />
+      <point x="1686.8853166986564" y="320.0" />
+      <point x="1360.6353166986564" y="320.0" />
+      <point x="1360.6353166986564" y="280.0" />
+      <point x="1361.3853166986564" y="280.0" />
+      <point x="40.75" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.recomstrategies.RecommendationsFactory" target="myy803.socialbookstore.datamodel.recomstrategies.FavouriteCategoriesStrategy" relationship="TO_ONE">
+      <point x="-113.42262008957402" y="-6.702459373000693" />
+      <point x="666.577379910426" y="280.0" />
+      <point x="666.577379910426" y="255.3964785668586" />
+      <point x="128.0462269993575" y="15.396478566858605" />
+    </edge>
+    <edge source="myy803.socialbookstore.controllers.AuthController" target="myy803.socialbookstore.services.UserService" relationship="TO_ONE">
+      <point x="40.75" y="-14.0" />
+      <point x="126.48768394113893" y="540.0" />
+      <point x="122.23182904670227" y="540.0" />
+      <point x="16.494145105563348" y="12.405722328854722" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.searchstrategies.ExactSearchStrategy" target="myy803.socialbookstore.mappers.BookMapper" relationship="TO_ONE">
+      <point x="52.75" y="-14.0" />
+      <point x="298.4876839411389" y="120.0" />
+      <point x="299.22790326295296" y="120.0" />
+      <point x="-6.509780678185962" y="15.987572616762534" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.recomstrategies.FavouriteAuthorsStrategy" target="myy803.socialbookstore.mappers.UserProfileMapper" relationship="TO_ONE">
+      <point x="62.0" y="-14.0" />
+      <point x="1142.0" y="120.0" />
+      <point x="640.0" y="120.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.UserProfile2" target="myy803.socialbookstore.datamodel.BookCategory" relationship="TO_MANY">
+      <point x="36.25" y="-14.0" />
+      <point x="1596.8853166986564" y="876.4510873960334" />
+      <point x="1993.0209914267436" y="876.4510873960334" />
+      <point x="1993.0209914267436" y="320.4691408829175" />
+      <point x="1900.8853166986564" y="320.4691408829175" />
+      <point x="40.25" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.controllers.UserController" target="myy803.socialbookstore.mappers.UserProfileMapper" relationship="TO_ONE">
+      <point x="9.593854126678707" y="-11.627802943058896" />
+      <point x="1270.3438541266787" y="580.0" />
+      <point x="1238.360588611644" y="580.0" />
+      <point x="1238.360588611644" y="71.52804606525913" />
+      <point x="728.2689576455507" y="71.52804606525913" />
+      <point x="88.2689576455507" y="6.440066538707612" />
+    </edge>
+    <edge source="myy803.socialbookstore.controllers.UserController" target="myy803.socialbookstore.mappers.BookCategoryMapper" relationship="TO_ONE">
+      <point x="-40.75" y="-14.0" />
+      <point x="1220.0" y="600.0" />
+      <point x="1188.8228406909782" y="600.0" />
+      <point x="99.27533461292319" y="16.8473857965443" />
+    </edge>
+    <edge source="myy803.socialbookstore.controllers.AuthController" target="myy803.socialbookstore.datamodel.User" relationship="CREATE">
+      <point x="-40.75" y="-14.0" />
+      <point x="44.987683941138926" y="520.0" />
+      <point x="5.7376839411389255" y="520.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.searchstrategies.ApproximateSearchStrategy" target="myy803.socialbookstore.mappers.BookMapper" relationship="TO_ONE">
+      <point x="66.5" y="-14.0" />
+      <point x="92.23768394113893" y="120.0" />
+      <point x="244.88056097248597" y="120.0" />
+      <point x="-60.85712296865296" y="14.518725527830995" />
+    </edge>
+    <edge source="myy803.socialbookstore.formsdata.BookDto" target="myy803.socialbookstore.datamodel.BookAuthor" relationship="CREATE">
+      <point x="29.5" y="14.0" />
+      <point x="1930.1353166986564" y="460.0" />
+      <point x="1980.6353166986564" y="460.0" />
+      <point x="1980.6353166986564" y="700.0" />
+      <point x="1880.6353166986564" y="700.0" />
+      <point x="0.0" y="-14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.controllers.UserController" target="myy803.socialbookstore.services.UserService" relationship="TO_ONE">
+      <point x="-40.75" y="-14.0" />
+      <point x="1220.0" y="600.0" />
+      <point x="925.3115291106845" y="600.0" />
+      <point x="925.3115291106845" y="480.00000000000006" />
+      <point x="145.73768394113893" y="480.00000000000006" />
+      <point x="145.73768394113893" y="460.0" />
+      <point x="141.23768394113893" y="460.0" />
+      <point x="35.5" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.controllers.UserController" target="myy803.socialbookstore.mappers.BookMapper" relationship="TO_ONE">
+      <point x="-40.75" y="-14.0" />
+      <point x="1220.0" y="665.704824056302" />
+      <point x="848.9314804862445" y="665.704824056302" />
+      <point x="848.9314804862445" y="460.0" />
+      <point x="380.0" y="460.0" />
+      <point x="380.0" y="120.0" />
+      <point x="337.41792757517305" y="120.0" />
+      <point x="31.680243634034127" y="13.78430198336521" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.searchstrategies.SearchFactory" target="myy803.socialbookstore.datamodel.searchstrategies.ApproximateSearchStrategy" relationship="TO_ONE">
+      <point x="-60.00430147153202" y="-13.521832373640677" />
+      <point x="145.7333824696069" y="280.0" />
+      <point x="25.737683941138926" y="280.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.UserProfile" target="myy803.socialbookstore.datamodel.BookAuthor" relationship="TO_MANY">
+      <point x="12.303971337172015" y="16.089092258477308" />
+      <point x="1732.9392880358284" y="500.0" />
+      <point x="1733.0446710172744" y="500.0" />
+      <point x="1733.0446710172744" y="776.4274078055023" />
+      <point x="1833.3019833653232" y="776.4274078055023" />
+      <point x="-47.33333333333333" y="-14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.formsdata.BookDto" target="myy803.socialbookstore.datamodel.Book" relationship="CREATE">
+      <point x="29.5" y="14.0" />
+      <point x="1930.1353166986564" y="460.0" />
+      <point x="1980.6353166986564" y="460.0" />
+      <point x="1980.6353166986564" y="600.0" />
+      <point x="1914.3853166986564" y="600.0" />
+      <point x="33.75" y="-14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.Book" target="myy803.socialbookstore.formsdata.BookDto" relationship="CREATE">
+      <point x="-11.25" y="-14.0" />
+      <point x="1869.3853166986564" y="540.0" />
+      <point x="1860.6353166986564" y="540.0" />
+      <point x="1860.6353166986564" y="460.0" />
+      <point x="1871.1353166986564" y="460.0" />
+      <point x="-29.5" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.BookAuthor" target="myy803.socialbookstore.datamodel.Book" relationship="TO_MANY">
+      <point x="47.33333333333333" y="-14.0" />
+      <point x="1903.1353166986564" y="766.0" />
+      <point x="22.5" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.Book" target="myy803.socialbookstore.datamodel.BookAuthor" relationship="TO_MANY">
+      <point x="-22.5" y="14.0" />
+      <point x="1858.1353166986564" y="766.0" />
+      <point x="-47.33333333333333" y="-14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.recomstrategies.RecommendationsFactory" target="myy803.socialbookstore.datamodel.recomstrategies.FavouriteAuthorsStrategy" relationship="TO_ONE">
+      <point x="40.071900703772144" y="-14.781118362124175" />
+      <point x="820.0719007037721" y="380.0" />
+      <point x="820.0" y="380.0" />
+      <point x="820.0" y="280.0" />
+      <point x="975.0352685860497" y="280.0" />
+      <point x="-104.96473141395029" y="12.458784388995525" />
+    </edge>
+    <edge source="myy803.socialbookstore.controllers.UserController" target="myy803.socialbookstore.formsdata.BookDto" relationship="CREATE">
+      <point x="78.62966730646099" y="-11.627802943058896" />
+      <point x="1339.379667306461" y="600.0" />
+      <point x="1660.6353166986564" y="600.0" />
+      <point x="1660.6353166986564" y="520.0" />
+      <point x="1860.6353166986564" y="520.0" />
+      <point x="1860.6353166986564" y="460.0" />
+      <point x="1871.1353166986564" y="460.0" />
+      <point x="-29.5" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.config.WebSecurityConfig" target="myy803.socialbookstore.config.CustomSecuritySuccessHandler" relationship="TO_ONE">
+      <point x="49.5" y="-14.0" />
+      <point x="293.02034804862467" y="640.0" />
+      <point x="418.63548560460663" y="640.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.searchstrategies.ExactSearchStrategy" target="myy803.socialbookstore.datamodel.searchstrategies.SearchStrategy" relationship="REALIZATION">
+      <point x="-52.75" y="-14.0" />
+      <point x="192.98768394113893" y="140.0" />
+      <point x="-34.262316058861074" y="140.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.Book" target="myy803.socialbookstore.datamodel.BookCategory" relationship="TO_ONE">
+      <point x="11.25" y="-14.0" />
+      <point x="1891.8853166986564" y="600.0" />
+      <point x="1900.6353166986564" y="600.0" />
+      <point x="1900.6353166986564" y="480.0" />
+      <point x="1967.1219234804862" y="480.0" />
+      <point x="1967.1219234804862" y="286.51028637236084" />
+      <point x="1900.8853166986564" y="286.51028637236084" />
+      <point x="40.25" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.BookCategory" target="myy803.socialbookstore.datamodel.Book" relationship="TO_MANY">
+      <point x="-40.25" y="14.0" />
+      <point x="1820.3853166986564" y="360.0" />
+      <point x="1820.6353166986564" y="360.0" />
+      <point x="1820.6353166986564" y="600.0" />
+      <point x="1846.8853166986564" y="600.0" />
+      <point x="-33.75" y="-14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.searchstrategies.SearchFactory" target="myy803.socialbookstore.datamodel.searchstrategies.ExactSearchStrategy" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="205.73768394113893" y="280.0" />
+      <point x="245.73768394113893" y="280.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.formsdata.UserProfileDto" target="myy803.socialbookstore.datamodel.BookAuthor" relationship="CREATE">
+      <point x="-71.23436714011541" y="12.933973128598751" />
+      <point x="1249.400949558541" y="540.0" />
+      <point x="1712.3730518234165" y="540.0" />
+      <point x="1712.3730518234165" y="700.0" />
+      <point x="1880.6353166986564" y="700.0" />
+      <point x="0.0" y="-14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.Book" target="myy803.socialbookstore.datamodel.UserProfile" relationship="TO_MANY">
+      <point x="11.25" y="-14.0" />
+      <point x="1891.8853166986564" y="600.0" />
+      <point x="1900.6353166986564" y="600.0" />
+      <point x="1900.6353166986564" y="480.0" />
+      <point x="1765.6353166986564" y="480.0" />
+      <point x="45.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.UserProfile" target="myy803.socialbookstore.datamodel.Book" relationship="TO_MANY">
+      <point x="0.0" y="14.0" />
+      <point x="1720.6353166986564" y="500.0" />
+      <point x="1794.7362487523992" y="500.0" />
+      <point x="1794.7362487523992" y="633.4660340371082" />
+      <point x="1846.8853166986564" y="633.4660340371082" />
+      <point x="-33.75" y="-14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.recomstrategies.FavouriteCategoriesStrategy" target="myy803.socialbookstore.mappers.UserProfileMapper" relationship="TO_ONE">
+      <point x="83.24639078694554" y="-9.560752399232285" />
+      <point x="618.1054259756851" y="230.43924760076771" />
+      <point x="618.1054259756851" y="120.0" />
+      <point x="-21.89457402431492" y="15.25314907229685" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.User" target="myy803.socialbookstore.datamodel.Role" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="5.7376839411389255" y="320.0" />
+      <point x="-134.26231605886107" y="320.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.controllers.UserController" target="myy803.socialbookstore.datamodel.searchstrategies.SearchFactory" relationship="TO_ONE">
+      <point x="-77.06812412028216" y="-12.93691618682135" />
+      <point x="1183.6818758797178" y="600.0" />
+      <point x="814.4135738963532" y="600.0" />
+      <point x="814.4135738963532" y="513.390188099808" />
+      <point x="205.73768394113893" y="513.390188099808" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.datamodel.UserProfile2" target="myy803.socialbookstore.datamodel.BookAuthor" relationship="TO_MANY">
+      <point x="36.25" y="-14.0" />
+      <point x="1596.8853166986564" y="860.0" />
+      <point x="1880.6353166986564" y="860.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="myy803.socialbookstore.services.UserServiceImpl" target="myy803.socialbookstore.mappers.UserMapper" relationship="TO_ONE">
+      <point x="-43.5" y="-14.0" />
+      <point x="-97.76231605886107" y="600.0" />
+      <point x="-94.26231605886107" y="600.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.3616121208742216" showDependencies="true" x="1038.6332258477282" y="528.8578067818294" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

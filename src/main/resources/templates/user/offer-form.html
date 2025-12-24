@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Book Offer Form</title>
+</head>
+
+<body>
+	
+	<div class="container">
+	
+		<h3>Book Offer Form</h3>
+		<hr>
+	
+		<form action="#" th:action="@{/user/save_offer}"
+						 th:object="${offer}" method="POST">
+		
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{id}" />
+			
+			<input type="text" th:field="*{title}"
+					class="form-control mb-4 col-4" placeholder="Title">
+
+			<input type="text" th:field="*{authors}"
+					class="form-control mb-4 col-4" placeholder="Authors">
+					
+			
+			<label for="html">Book Category</label>
+    		<ul>
+    			<li th:each="acategory: ${categories}">
+    				<input type="radio" th:field="*{category}" th:value="${acategory.name}" />
+    				<label th:for="${#ids.prev('category')}" th:text="${acategory.name}"></label>
+    			</li>
+    		</ul>
+			
+			<button type="submit" class="btn btn-info col-2">Save</button>
+						
+		</form>
+	
+		<hr>
+
+		<a th:href="@{/user/offers}">Back to Book Offers Directory</a>
+		
+	</div>
+</body>
+
+</html>
+
+
+
+
